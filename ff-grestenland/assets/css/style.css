@@ -1,0 +1,359 @@
+
+@import url("font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: red;  /*DEBUG*/
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+p {
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 300;
+}
+
+
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="u"] {
+    float: left;
+    padding: 0px;
+}
+
+.header.index {
+    background-image: url(../../images/pic01.jpg);
+    background-position: center top;
+    color: #ffffff;
+    padding: 15px;
+    height: 20em;
+    text-align: center;
+    position: fixed;
+    width: calc(100% - 5em);
+    transform: translate(5em, 0);
+    background-size: cover;
+}
+
+.header.compensation {
+    height: 20em;
+}
+
+.header.background {
+    background-color: #f6f6f6;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.comp.sizing {
+    display: inline-block;
+    width: calc(100% - 5em);
+    float: right;
+}
+
+.comp.sizing .padding {
+    padding: 15px;
+}
+
+
+
+
+
+/* BOX */
+
+.box {
+    position: relative;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+    font-size: 1em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 5px;
+    min-width: 290px;
+    margin: 15px;
+}
+
+.box .image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.box .image img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.box .para {
+    width: 100%;
+    padding: 20px;
+    height: 20em;
+    overflow: hidden;
+}
+
+.box .para p {
+    text-align: justify;
+    font-weight: 300
+}
+
+.box .button {                                                     /* definiert den "Mehr..." Button */
+    font-weight: 450;
+    font-size: 1.5em;
+    opacity: 0;
+    margin-top: 20%;
+    margin-right: 50%; 
+    background-color: #E8222F;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    transform: translate(50%, -50%);
+    padding: 0;
+    transition: .5s ease;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+}
+.box:hover .button {
+    opacity: 1;
+    margin-top: 33.33%;
+}
+
+.box:hover .gray {
+    opacity: 0.5;
+}
+
+.box .button:hover {
+    background-color: #EA3641;
+    color: white;
+    transition: .2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.5) inset;
+}
+
+.box .button a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.box .compensation {
+    height: 20px;
+    background-color: #fff;
+    border-radius: 5px
+}
+
+.box .blend {
+    height: 35px;
+    background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1));
+    border: 3px;
+    border-color: black;
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    bottom: 20px;
+    left: 0;
+}
+
+
+.box .gray {
+    width: 100%;
+    height: calc(100% - 20em - 24px);
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    border-radius: 5px 5px 0 0;
+    transition: .5s ease;
+}
+
+
+/* footer */
+
+.footer {
+    position: relative;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    min-width: 290px;
+    margin: 0;
+    padding: 20px calc(15% + 20px);
+    transform: translate(5em, 0);
+    width: calc(100% - 5em);
+
+}
+
+.footer p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.footer li {
+    border-left: solid 1px #dddddd;
+    display: inline-block;
+    list-style: none;
+	margin-left: 1em;
+	padding-left: 1em;
+}
+
+
+
+
+.nav {
+    background-color: #555;
+    height: 100%;
+    width: 5em;
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    float: left;
+    z-index: 1;
+    padding: 0;
+}
+
+.nav .menu {/* *
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    */
+    display: block;
+    padding: 0;
+    background-color: dimgrey;
+}
+
+.nav .menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+
+}
+
+.nav .menu li {
+    border-left: solid 1px #dddddd;
+    display: inline-block;
+    list-style: none;
+	margin-left: 1em;
+	padding-left: 1em;
+    
+}
+
+
+
+
+.u1 {width: 4.17%;}
+.u2 {width: 8.33%;}
+.u3 {width: 12.5%;}
+.u4 {width: 16.67%;}
+.u5 {width: 20.83%;}
+.u6 {width: 25%;}
+.u7 {width: 29.17%;}
+.u8 {width: 33.33%;}
+.u9 {width: 37.5%;}
+.u10 {width: 41.67%;}
+.u11 {width: 45.83%;}
+.u12 {width: 50%;}
+.u13 {width: 54.17%;}
+.u14 {width: 58.33%;}
+.u15 {width: 62.5%;}
+.u16 {width: 66.67%;}
+.u17 {width: 70.83%;}
+.u18 {width: 75%;}
+.u19 {width: 79.17%;}
+.u20 {width: 83.33%;}
+.u21 {width: 87.5%;}
+.u22 {width: 91.67%;}
+.u23 {width: 95.83%;}
+.u24 {width: 100%;}
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+.u1 {width: 8.33%;}
+.u2 {width: 16.67%;}
+.u3 {width: 25%;}
+.u4 {width: 33.33%;}
+.u5 {width: 41.67%;}
+.u6 {width: 50%;}
+.u7 {width: 58.33%;}
+.u8 {width: 66.67%;}
+.u9 {width: 75%;}
+.u10 {width: 83.33%;}
+.u11 {width: 91.67%;}
+.u12 {width: 100%;}
+.u13 {width: 100%;}
+.u14 {width: 100%;}
+.u15 {width: 100%;}
+.u16 {width: 100%;}
+.u17 {width: 100%;}
+.u18 {width: 100%;}
+.u19 {width: 100%;}
+.u20 {width: 100%;}
+.u21 {width: 100%;}
+.u22 {width: 100%;}
+.u23 {width: 100%;}
+.u24 {width: 100%;} 
+    transition: .2s ease;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
+    .comp.sizing {
+        padding-right: calc(50% - 600px); /*  (100% - 1200px)/2  */
+        padding-left: calc(50% - 600px);
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 1730px) {
+    .comp.sizing {
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+}
